@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-COM VIA JQ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!--Login Modal-->
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center"
+    >
+      <div class="bg-white p-4 rounded">
+        <!--Login Form-->
+        <form id="loginForm">
+          <input
+            type="text"
+            id="username"
+            placeholder="Please enter username"
+            class="p-2 mb-2 border rounded"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Please enter password"
+            class="p-2 mb-2 border rounded"
+            required
+          />
+          <button type="submit" class="p-2 bg-blue-500 text-white rounded">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <!--Modal End-->
+
+    <!--Navbar Section-->
+    <nav id="navbar" class="bg-gray-800 p-4 hidden">
+      <div class="container mx-auto">
+        <div class="flex justify-between" style="width: 80%">
+          <div>
+            <a href="#" class="text-white">Anasayfa</a>
+            <a href="#" class="text-white ml-4">Ürünler</a>
+            <a href="#" class="text-white ml-4">Kategoriler</a>
+          </div>
+
+          <div>
+            <a href="#" class="text-white ml-4" id="logoutBtn"
+              ><i class="fa-solid fa-right-from-bracket"></i
+            ></a>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartBadge">0</span>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="offcanvasWithBothOptions"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h5
+                  class="offcanvas-title"
+                  id="offcanvasWithBothOptionsLabel"
+                ></h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <!-- Buraya cart gelecek -->
+              </div>
+            </div>
+            <!-- <a href="#" class="text-white ml-4" id="cartBtn"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><span
+                id="cartBadge"
+                class="bg-red-500 text-white ml-2 p-1 rounded-full"
+                >0</span
+              ></a
+            > -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar-->
+
+    <!--Main content-->
+    <div id="content" class="container mx-auto p-4 hidden">
+      <!-- Products Listing-->
+      <div
+        id="productsListing"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <!-- Product carts here-->
+      </div>
+    </div>
+    <!-- Main end-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
